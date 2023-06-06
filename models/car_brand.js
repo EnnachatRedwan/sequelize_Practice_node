@@ -1,21 +1,21 @@
 const Sequelize = require("sequelize");
+
 const sequelize = require("../utils/database");
 
-const Client = sequelize.define("client", {
+const Car=require('./car')
+
+const CarBrand = sequelize.define("car_brand", {
   id: {
     type: Sequelize.INTEGER,
-    primaryKey: true,
+    allowNull: false,
     autoIncrement: true,
-    allowNull: false,
+    primaryKey: true,
   },
-  fullname: {
+  Brand: {
     type: Sequelize.STRING,
     allowNull: false,
-  },
-  email: {
-    type: Sequelize.STRING,
-    allowNull: true,
   },
 });
 
-module.exports = Client;
+
+module.exports = CarBrand;

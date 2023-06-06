@@ -1,4 +1,3 @@
-const { json } = require("sequelize");
 const Client = require("../models/client");
 
 exports.getClients = (req, res, next) => {
