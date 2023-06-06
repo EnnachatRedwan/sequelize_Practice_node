@@ -10,7 +10,6 @@ exports.getCars = (req, res, next) => {
     attributes:['platenumber']
   })
     .then((result) => {
-      console.log(result);
       res.status(200).json(result);
     })
     .catch((err) => console.log(err));

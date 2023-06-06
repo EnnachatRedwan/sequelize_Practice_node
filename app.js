@@ -2,7 +2,11 @@ const express = require("express");
 const sequelize = require("./utils/database");
 const clientRoutes = require("./routes/client_router");
 const carRoutes = require("./routes/car_routes");
+const colorRoutes = require("./routes/color_router");
+const brandRoutes = require("./routes/brand_routes");
+const typeRoutes = require("./routes/type_routes");
 const cors = require("cors");
+
 const Rent = require("./models/rent");
 const Color = require("./models/color");
 const CarType = require("./models/car_type");
@@ -22,6 +26,9 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use("/client", clientRoutes);
 app.use("/car", carRoutes);
+app.use("/color", colorRoutes);
+app.use("/brand", brandRoutes);
+app.use("/type", typeRoutes);
 
 const PORT = process.env.prot | 3000;
 
