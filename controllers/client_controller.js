@@ -29,7 +29,7 @@ exports.putClient = (req, res, next) => {
   const client = req.body;
   Client.findByPk(client.id)
     .then((oldClient) =>
-      oldClient.update({ fullname: client.fullname, email: client.email })
+      oldClient.update(client)
     )
     .then((result) => req.status(200).json(result))
     .catch((err) => console.log(err));
