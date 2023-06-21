@@ -39,6 +39,7 @@ exports.deleteCar = (req, res, next) => {
 };
 
 exports.putCar = (req, res, next) => {
+  console.log('editing')
   const car = req.body;
   console.log(car);
   Car.findByPk(car.plateNumber)
@@ -49,6 +50,6 @@ exports.putCar = (req, res, next) => {
         carTypeId: car.type.id,
       })
     )
-    .then((result) => req.status(200).json(result))
+    .then((result) => res.status(200).json(result))
     .catch((err) => console.log(err));
 };
