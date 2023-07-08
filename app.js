@@ -5,6 +5,7 @@ const carRoutes = require("./routes/car_routes");
 const colorRoutes = require("./routes/color_router");
 const brandRoutes = require("./routes/brand_routes");
 const typeRoutes = require("./routes/type_routes");
+const rentRoutes = require("./routes/rent_router");
 const cors = require("cors");
 
 const Rent = require("./models/rent");
@@ -29,6 +30,7 @@ app.use("/car", carRoutes);
 app.use("/color", colorRoutes);
 app.use("/brand", brandRoutes);
 app.use("/type", typeRoutes);
+app.use("/rent", rentRoutes);
 
 const PORT = process.env.prot | 3000;
 
