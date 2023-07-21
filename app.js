@@ -8,11 +8,11 @@ const typeRoutes = require("./routes/type_routes");
 const rentRoutes = require("./routes/rent_router");
 const cors = require("cors");
 
-const Rent = require("./models/rent");
-const Color = require("./models/color");
-const CarType = require("./models/car_type");
-const Car = require("./models/car");
-const CarBrand = require("./models/car_brand");
+// const Rent = require("./models/rent");
+// const Color = require("./models/color");
+// const CarType = require("./models/car_type");
+// const Car = require("./models/car");
+// const CarBrand = require("./models/car_brand");
 
 const app = express();
 
@@ -37,12 +37,6 @@ const PORT = process.env.prot | 3000;
 sequelize
   .sync()
   .then(() => {
-    // Car.create({
-    //   platenumber: "19923-A-1",
-    //   colorId: 1,
-    //   carTypeId: 2,
-    //   carBrandId: 1,
-    // });
     app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
   })
   .catch((err) => console.log(err));

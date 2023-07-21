@@ -12,6 +12,10 @@ const Car = sequelize.define("car", {
     allowNull: false,
     primaryKey: true,
   },
+  pricePerDay: {
+    type: Sequelize.FLOAT,
+    allowNull: false,
+  },
 });
 
 Car.belongsTo(Color);
